@@ -1,0 +1,28 @@
+.container{
+    width: 650px;
+}
+input#id{
+    width: 200px;
+    display: inline-flex;
+    margin-left: 10px;
+}
+button{
+    width: 150px;
+    margin-left: 100px;
+}
+
+.form-group.mt-3#id{
+    width: 650px;
+    float: left;
+
+}
+
+.form-group.mt-3#button{
+    width: 210px;
+    float: right;
+
+}
+
+.form-group.mt-3{
+    width: 470px;
+}

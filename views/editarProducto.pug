@@ -1,0 +1,37 @@
+extends base.pug
+
+block head
+    link(rel="stylesheet", href="css/editarProducto.css")
+block title
+    title Editar Producto
+block container
+    .container.mt-5
+        h1 Editar Producto
+        hr
+        form(action="/buscarProducto" method="post")
+            
+            .form-group.mt-3#id
+                label(for="id" ) Id
+                input#id.form-control(  type="text" name="id")
+                button.btn.btn-primary Buscar
+
+            .form-group.mt-3
+                label(for="nombre" ) Descripcion
+                input#username.form-control( type="text" name="nombre" value= `${nombre}`)
+            
+            .form-group.mt-3
+                label(for="precioCompra" ) Precio de compra
+                input#password.form-control( type="text" name="precioCompra")
+
+
+            .form-group.mt-3
+                label(for="precioVenta" ) Precio de Venta
+                input#password.form-control( type="text" name="precioVenta")
+
+            .form-group.mt-3
+                label(for="categoria" ) Categoria
+                input#fullname.form-control(  type="text" name="categoria")
+          
+
+
+                
