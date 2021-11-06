@@ -1,0 +1,42 @@
+extends base.pug
+block head
+    link(rel="stylesheet", href="/bootstrap/bootstrap.min.css")
+
+
+block title
+    title Productos
+
+block container
+    h1  Ver Productos
+    if (data.length != 0)
+        table.table
+            thead
+                tr
+                th(scope='col') Id
+                th(scope='col') Nombre
+                th(scope='col') Precio de Compra
+                th(scope='col') Precio de Venta
+            tbody
+                each val in data
+                    tr
+                        th(scope='row') 1
+                        td #{val.id}
+                        td #{val.nombre}
+                        td #{val.precioCompra}
+                        td #{val.precioVenta} 
+                        td 
+                            a.w-10.btn.btn-lg.btn-success(href="/editarProducto/"+val.id) Editar 
+                            a.w-10.btn.btn-lg.btn-danger(href="/eliminarProducto/"+val.id) Eliminar
+        a.w-10.btn.btn-lg.btn-dark(href="/agregarProducto") Agregar Productos
+
+    else 
+        p No hay productos para mostrar 
+        a.w-15.btn.btn-lg.btn-secondary(href="/agregarProducto/") Guardar Productos 
+
+
+
+
+
+
+            
+    

@@ -1,0 +1,29 @@
+extends base.pug
+
+
+block head
+    link(rel="stylesheet", href="/css/editarProducto.css")
+    
+block title
+    title Registro Categoria
+
+block container
+    .container.mt-5
+        h1 Registrar Categoria
+        hr
+        form(action="/categorias" method="post")
+            
+            .form-group.mt-3
+                label(for="id" hidden="true" ) Id
+                input#username.form-control( hidden="true" type="text" name="id")
+            .form-group.mt-3
+                label(for="nombreCategoria") Nombre de Categoria
+                input#username.form-control(type="text" name="nombreCategoria")
+            
+           
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Guardar
+
+
+                

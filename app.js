@@ -16,7 +16,8 @@ const app = express()
 app.set('view engine', 'pug')
 
 // Definir la ubicacion de los archivos publicos
-app.use(express.static('public'))
+app.use(express.static('public/'))
+
 
 // Configurar el manejo de sesiones en la app de express
 const oneDay = 24 * 60 * 60 * 1000

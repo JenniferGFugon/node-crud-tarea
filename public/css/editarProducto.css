@@ -1,6 +1,11 @@
 .container{
-    width: 650px;
+    width: 500px;
 }
+.container.mt-5{
+    border-style:solid;
+
+}
+
 input#id{
     width: 200px;
     display: inline-flex;
@@ -8,13 +13,8 @@ input#id{
 }
 button{
     width: 150px;
-    margin-left: 100px;
-}
-
-.form-group.mt-3#id{
-    width: 650px;
-    float: left;
-
+    margin-left: 150px;
+    margin-bottom: 30px;
 }
 
 .form-group.mt-3#button{
@@ -22,7 +22,17 @@ button{
     float: right;
 
 }
+h1{
+    margin-left: 90px;
+}
 
 .form-group.mt-3{
-    width: 470px;
+    width: 460px;
+    display: flex;
+}
+label{
+    width: 150px;
+}
+label#id{
+    width: 100px;
 }

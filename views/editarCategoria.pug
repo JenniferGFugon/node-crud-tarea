@@ -1,0 +1,28 @@
+extends base.pug
+
+block head
+    link(rel="stylesheet", href="/css/editarProducto.css")
+
+block title
+    title Editar Categoria
+block container
+    .container.mt-5
+        h1 Editar Categoria
+        hr
+        form(action="/editarCategoria/"+data.idCategoria method="post")
+                
+            .form-group.mt-3#id
+                label#id(for="id" ) Id
+                input#id.form-control(  type="text" name="id" value= `${data.idCategoria}`)
+
+            .form-group.mt-3
+                label(for="nombreCategoria" ) Descripcion
+                input#nombre.form-control( type="text" name="nombreCategoria" value= `${data.nombreCategoria }` ) 
+                
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Editar
+          
+
+
+                

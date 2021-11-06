@@ -1,10 +1,11 @@
 extends base.pug
-
+block head
+    link(rel="stylesheet", href="/css/editarProducto.css")
 block title
     title Registro Producto
 
 block container
-    .container.mt-5(style={width:'450px'})
+    .container.mt-5
         h1 Registrar Producto
         hr
         form(action="/productos" method="post")
@@ -25,7 +26,7 @@ block container
                 label(for="precioVenta") Precio de Venta
                 input#password.form-control(type="text" name="precioVenta")
 
-            .form-group
+            .form-group.mt-3
                 label(for="categoria") Categoria
                 input#fullname.form-control(type="text" name="categoria")
             .form-group.mt-3

@@ -2,7 +2,7 @@ import bcryptjs from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import { promisify } from 'util'
 import con from '../database/connection.js'
-
+var products =[]
 var session
 
 //guardar Productos
@@ -27,35 +27,54 @@ export const producto = async (req, res) => {
             return
         }
 
-        res.redirect('/')
+        res.redirect('/verProducto')
     })
     
 }
 
+//guardar Categoria
+export const categoria = async (req, res) => {
+    const {nombreCategoria} = req.body
+
+    const data = {
+        nombreCategoria: nombreCategoria,
+        
+    }
+    
+    con.query('INSERT INTO categoriaproducto SET ?', data, (err, result) => {
+        if (err) {
+            console.log('Ocurrio un error al insertar el categoria',err)
+            return
+        }
+
+        res.redirect('/verCategoria')
+    })
+    
+}
+
+
 //buscar id en la base de datos
-export const buscarProducto = async (req, res) => {
+/*
+export const editarProducto = async(req, res) => {
     const {id } = req.body
 
     con.query('SELECT nombre,precioCompra,precioVenta,categoria FROM producto WHERE id = ?', id, (err, result) => {
-    //var product
+
     
         if (err) {
             console.log('Ocurrio un error al consultar el producto',err)
             return
         }
         else{
-            console.log('El id seleccionado fue: ',id);
-            result.write(JSON.stringify({
-                data:result
-            }))
-            console.log(data);
+            console.log(result);
+            return result
 
         }
 
     })
     
 }
-
+*/
 
 
 

@@ -1,0 +1,13 @@
+extends base.pug
+block head
+    link(rel="stylesheet", href="css/index.css")
+
+block title
+    title Productos
+
+block container
+    h1  Gestionar Productos
+    .container.mt-2
+
+        a.w-100.btn.btn-lg.btn-secondary.mt-1(href="/agregarCategoria") Agregar
+        a.w-100.btn.btn-lg.btn-secondary.mt-1(href="/editarProducto") Editar
